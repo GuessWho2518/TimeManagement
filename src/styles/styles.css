@@ -1,25 +1,45 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;900&display=swap');
-@import './normalize.css';
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+@import "./normalize.css";
 
 .page {
   min-height: 100vh;
-  background: black;
-  font-family: 'Inter', sans-serif;
+  background: #222831;
+  font-family: "Nunito", serif;
 }
-
+.page__content {
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 100vh;
+}
 .header__title {
-  font-size: 60px;
+  font-size: 40px;
   font-weight: 900;
   margin: 0;
-  color: white;
+  color: #29a19c;
   text-align: center;
-  margin-bottom: 54px;
+}
+.content {
+  /* display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 20px; */
+  box-sizing: border-box;
+  padding: 30px;
+}
+.board {
+  height: 100vh;
+  box-sizing: border-box;
+  padding: 20px;
+  background-color: #2c3440;
+  border-radius: 10px;
 }
 
 .todos {
-  width: 700px;
   margin: 0 auto;
-  padding: 96px 0 12px;
+}
+.todos__form {
+  display: flex;
+  justify-content: space-between;
 }
 
 .todo-form {
@@ -28,23 +48,26 @@
 }
 
 .todo-form__input {
-  background: white;
+  background: #364964;
+  color: #29a19c;
   border-radius: 5px;
   font-size: 24px;
   padding: 21px;
-  font-family: 'Inter', sans-serif;
   font-style: normal;
   font-weight: 900;
   border: none;
   flex-grow: 1;
 }
+.todo-form__input::placeholder {
+  color: #29a19c;
+}
 
 .todo-form__submit-btn {
-  background: white;
+  background: #364964;
+  color: #29a19c;
   font-size: 24px;
   padding: 21px;
   border-radius: 5px;
-  font-family: 'Inter', sans-serif;
   font-style: normal;
   font-weight: 900;
   border: none;
@@ -53,15 +76,14 @@
 }
 
 .todos__list {
-  width: 700px;
   margin: 0 auto;
-  padding: 96px 0 12px;
+  padding: 30px 0 12px;
 }
 
 .todo-item {
   display: flex;
   align-items: center;
-  border: 1px solid #6F6F6F;
+  border: 1px solid #6f6f6f;
   box-sizing: border-box;
   border-radius: 5px;
   padding: 40px;
@@ -69,18 +91,17 @@
 }
 
 .todo-item__text {
-  font-family: 'Inter', sans-serif;
+  color: #29a19c;
   font-style: normal;
   font-weight: 900;
   font-size: 24px;
-  color: white;
   flex-grow: 1;
 }
 
 .todo-item__copy {
   width: 24px;
   height: 24px;
-  background: url('../images/copy.svg') no-repeat center;
+  background: url("../images/copy.svg") no-repeat center;
   background-size: 24px 24px;
   border: none;
   margin-left: 30px;
@@ -90,7 +111,7 @@
 .todo-item__del {
   width: 24px;
   height: 24px;
-  background: url('../images/del.svg') no-repeat center;
+  background: url("../images/del.svg") no-repeat center;
   background-size: 20px 20px;
   border: none;
   margin-left: 30px;
@@ -100,19 +121,19 @@
 .todo-item__edit {
   width: 24px;
   height: 24px;
-  background: url('../images/edit.svg') no-repeat center;
+  background: url("../images/edit.svg") no-repeat center;
   background-size: 20px 20px;
   border: none;
   margin-left: 30px;
   cursor: pointer;
+  fill: #29a19c;
 }
 
 .popup {
-  font-family: 'Inter', Arial, sans-serif;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgba(0, 0, 0, .7);
+  background-color: rgba(0, 0, 0, 0.7);
   position: fixed;
   top: 0;
   left: 0;
@@ -123,7 +144,7 @@
   opacity: 0;
   pointer-events: none;
   user-select: none;
-  transition: visibility 0.3s, opacity 0.3s; 
+  transition: visibility 0.3s, opacity 0.3s;
   z-index: 10;
 }
 
@@ -136,7 +157,7 @@
 .popup__close {
   width: 35px;
   height: 35px;
-  background: transparent url('../images/close.svg') center no-repeat;
+  background: transparent url("../images/close.svg") center no-repeat;
   background-size: 35px 35px;
   border: none;
   position: absolute;
