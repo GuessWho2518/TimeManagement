@@ -40,3 +40,8 @@ npm run build
 ```
 yarn build
 ```
+<!-- /**
+ * https://www.figma.com/design/IrKwKS9VO2dXIPIeUo95uj/coolicons-%7C-Free-Iconset-(Community)?node-id=17102-2265&t=TYjjzY9ot6a0P1Xi-0
+ * хранить массив тасок в new map(коллекция)
+ * хранить таски в localStorage
+ */ -->
