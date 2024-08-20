@@ -1,4 +1,4 @@
-# Проектная работа "Веб-ларек"
+# Time Management
 
 Стек: HTML, SCSS, TS, Webpack
 
